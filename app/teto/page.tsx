@@ -1,4 +1,5 @@
-"use client"
+if (typeof window !== "undefined") {
+  "use client"
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
@@ -507,4 +508,4 @@ export default function TetoPage() {
     </div>
   )
 }
-
+}
