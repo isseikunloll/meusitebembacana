@@ -15,13 +15,20 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: true, // Necessário para export estático
   },
+  // Configurações para melhorar o desempenho do build
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  // Adicione estas configurações para melhor compatibilidade
+  trailingSlash: true, // Recomendado para GitHub Pages
+  // Configuração opcional para basePath se estiver em subdiretório
+  // basePath: '/meu-repositorio',
+  // Configuração para fallback de rotas
+  skipTrailingSlashRedirect: true,
 };
 
 function mergeConfig(baseConfig, customConfig) {
