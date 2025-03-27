@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Estilos para o conteúdo HTML do AniList */
+.anilist-content img {
+  @apply rounded-md mx-auto my-2 max-w-full;
+}
+
+.anilist-content a {
+  @apply text-blue-400 hover:text-blue-300 no-underline hover:underline;
+}
+
+.anilist-content blockquote {
+  @apply bg-gray-800/50 p-3 my-2 border-l-4 border-gray-600 rounded;
+}
+
+.anilist-content p {
+  @apply my-2;
+}
+
+.anilist-content h1,
+.anilist-content h2,
+.anilist-content h3,
+.anilist-content h4 {
+  @apply font-bold my-3;
+}
+
+.anilist-content h1 {
+  @apply text-xl;
+}
+
+.anilist-content h2 {
+  @apply text-lg;
+}
+
+.anilist-content ul {
+  @apply list-disc pl-5 my-2;
+}
+
+.anilist-content ol {
+  @apply list-decimal pl-5 my-2;
+}
+
+.anilist-content li {
+  @apply my-1;
+}
+
+.anilist-content b,
+.anilist-content strong {
+  @apply font-bold;
+}
+
+.anilist-content i,
+.anilist-content em {
+  @apply italic;
+}
+
+.anilist-content u {
+  @apply underline;
+}
+
+.anilist-content s,
+.anilist-content del,
+.anilist-content strike {
+  @apply line-through;
+}
+
+.anilist-content center {
+  @apply text-center;
+}
+
+.anilist-content div {
+  @apply my-2;
+}
+
