@@ -3,7 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main  # Alterar se sua branch principal tiver outro nome
+      - main  # Ou 'master' dependendo do seu repositório
 
 permissions:
   contents: write
@@ -20,16 +20,15 @@ jobs:
         with:
           node-version: 18
 
-      - name: Instalar dependências (Ignorando conflitos)
+      - name: Instalar dependências
         run: npm install --legacy-peer-deps
 
-      - name: Build e Exportar
-        run: |
-          npm run build
-          npm run export
+      - name: Build
+        run: npm run build
 
       - name: Deploy no GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Branch onde os arquivos estáticos serão publicados
-          folder: out  # Pasta gerada pelo export do Next.js
+          branch: gh-pages
+          folder: out  # Pasta padrão do Next.js export
+          clean: true
